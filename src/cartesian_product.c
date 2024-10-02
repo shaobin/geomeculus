@@ -27,8 +27,8 @@ void* cartesian_product(struct list* lists)
         {
             struct list* result_list = (struct list*)result_node->data;
 
-            struct list_node* input_list_node = input_list->head;
-            while (input_list_node != NULL) // iterate over each input list element
+            struct list_node* input_elem_node = input_list->head;
+            while (input_elem_node != NULL) // iterate over each input list element
             {
                 struct list* new_result_list = list_create();
 
@@ -40,9 +40,9 @@ void* cartesian_product(struct list* lists)
                     result_list_node = result_list_node->next;
                 }
 
-                list_append(new_result_list, input_list_node->data);
+                list_append(new_result_list, input_elem_node->data);
                 list_append(new_result, new_result_list);
-                input_list_node = input_list_node->next;
+                input_elem_node = input_elem_node->next;
             }
 
             result_node = result_node->next;
