@@ -2,9 +2,7 @@
 
 **Geomeculus** is a program for doing geometric algebra and **geome**tric cal**culus**. It is a command-line tool implemented in C.
 
-Geomeculus provides an environment for learning and applying mathematical and physical concepts. Whether you're a student, researcher, or enthusiast, Geomeculus can help you deepen your understanding, build intuition, and solve real-world problems.
-
-To explore the fundamentals of geometric algebra and geometric calculus, as well as how Geomeculus can be applied in practice, check out this [tutorial](https://www.binshao.info/download/tutorials/geometric_algebra-geometric_calculus.pdf).
+Geomeculus provides an environment for learning and applying mathematical and physical concepts. To explore the fundamentals of geometric algebra and geometric calculus, as well as how Geomeculus can be applied in practice, check out this [tutorial](https://www.binshao.info/download/tutorials/geometric_algebra-geometric_calculus.pdf).
 
 ## Getting started
 You can use the `scripts/build.py` script to set up the development environment and build Geomeculus. This project provides a meta build system that automatically detects the code dependencies, generates the [Ninja](https://ninja-build.org) build scripts, and builds the project. The meta build system should work for most modern Linux systems.
