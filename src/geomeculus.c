@@ -435,7 +435,7 @@ static void print_cmd_help(char const* cmd)
 void print_feedback_channel()
 {
     print_block_line(NULL);
-    printf("          Feedback and Suggestions: Bin Shao <binshao@microsoft.com>\n");
+    printf("          Feedback and Suggestions: Bin Shao <binshao@live.com>\n");
     print_block_line(NULL);
 }
 
