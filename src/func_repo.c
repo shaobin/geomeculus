@@ -1391,4 +1391,3 @@ void* func_derivative(void* func)
     struct func_desc* fd = list_get(&expr_funcs, func_id);
     return fd->derivative(func);
 }
-
