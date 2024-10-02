@@ -7,6 +7,7 @@
 
 #include "expr.h"
 #include "mm.h"
+#include "runtime.h"
 #include "bitmap.h"
 #include "list.h"
 #include "b64_kv_array.h"
@@ -164,14 +165,14 @@ static void test_variable_blade_signature(u64 run)
 
 int main(int argc, char* argv[])
 {
-    mm_initialize();
+    runtime_initialize();
     force_run_all_tests = cli_check_flag(argc, argv, "--run-all");
 
     test_bubble_sort_basis_vectors(0);
 
     test_variable_blade_signature(1);
 
-    mm_finalize();
+    runtime_finalize();
     mm_print_status();
     return 0;
 }
