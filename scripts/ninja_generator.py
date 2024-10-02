@@ -310,7 +310,7 @@ def generate_ninja_script(debug=False):
                         matched = True
                         break
                 if not matched:
-                    print(f"Error: {libsym} not found a matching library")
+                    print(f"Warning: {obj}: {libsym} not found a matching library")
 
     write_ninja_file_exe_targets(
         os.path.join(config["active_build_dir"], "build.ninja"),

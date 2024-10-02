@@ -34,6 +34,7 @@ class Configuration:
                 "__tls_get_addr",
                 "__cudaRegisterLinkedBinary_",
                 "_intel_fast_mem",
+                "__libm_sse2_sincos",
                 "__svml_",
                 "_GLOBAL_OFFSET_TABLE_",
             ],
