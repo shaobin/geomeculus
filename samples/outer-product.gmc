@@ -1,0 +1,14 @@
+a = 2 * e1
+b = 3 * e2
+0.5 * ($a * $b + -1 * $b * $a)
+outer_product($a, $b)
+
+a = e1 + 2 * e2 + 3 * e3
+b = 4 * e1 + 5 * e2 + 6 * e3
+0.5 * ($a * $b + -1 * $b * $a)
+outer_product($a, $b)
+
+c = v11 * e1 + v12 * e2 + v13 * e3
+d = v21 * e1 + v22 * e2 + v23 * e3
+0.5 * ($c * $d + -1 * $d * $c)
+outer_product($c, $d)

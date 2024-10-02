@@ -1,0 +1,27 @@
+# 5D conformal geometric algebra
+algebra_signature 4,1
+dim_signatures
+ezero = 0.5 * (-1 * e4 + e5)
+einf = e4 + e5
+inner_product(e4, e5)
+$ezero * $ezero
+$einf * $einf
+inner_product($einf, $ezero)
+outer_product($einf, $ezero)
+$einf * $ezero
+$ezero * $einf
+
+# define a 3D point (0, 1, 0)
+x = 0 * e1 + e2 + 0 * e3
+P = $x + 0.5 * $x * $x * $einf + $ezero
+P2 = e2 + 0.5 * $einf + $ezero
+
+# rotation (pi / 2)
+R1 = exponential(-0.25 * pi() * e1 * e2)
+R2 = exponential(0.25 * pi() * e1 * e2)
+P3 = $R1 * $P * $R2
+
+# rotation (pi)
+R1 = exponential(-0.5 * pi() * e1 * e2)
+R2 = exponential(0.5 * pi() * e1 * e2)
+P4 = $R1 * $P * $R2

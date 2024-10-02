@@ -1,0 +1,32 @@
+algebra_signature 4,1
+dim_signatures
+display_precision 6
+ezero = 0.5 * (-1 * e4 + e5)
+einf = e4 + e5
+I = outer_product(e1, e2, e3, $einf, $ezero)
+I_ = outer_product($ezero, $einf, e3, e2, e1)
+
+d1 = 2.15
+d2 = 1.7320508075688772
+d3 = 1
+
+p1 = v11 * e1 + v12 * e2 + v13 * e3; v11=0; v12=0; v13=0
+p2 = v21 * e1 + v22 * e2 + v23 * e3; v21=-1; v22=0; v23=0
+p3 = v31 * e1 + v32 * e2 + v33 * e3; v31=-1.5; v32=0.8660254037844386; v33=0
+
+P1 = $p1 + 0.5 * $p1 * $p1 * $einf + $ezero
+P2 = $p2 + 0.5 * $p2 * $p2 * $einf + $ezero
+P3 = $p3 + 0.5 * $p3 * $p3 * $einf + $ezero
+
+S1 = $P1 + -0.5 * $d1 * $d1 * $einf
+S2 = $P2 + -0.5 * $d2 * $d2 * $einf
+S3 = $P3 + -0.5 * $d3 * $d3 * $einf
+
+# Dual of the intersection
+Q = -1 * outer_product($S1, $S2, $S3) * $I_
+QQ_sqrt = sqrt(inner_product($Q, $Q))
+
+Inv_Inf_Q = inverse_blade(inner_product($einf, $Q))
+
+T1 = -1 * (-1 * $QQ_sqrt + $Q) * $Inv_Inf_Q
+T2 = -1 * ($QQ_sqrt + $Q) * $Inv_Inf_Q

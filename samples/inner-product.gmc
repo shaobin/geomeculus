@@ -1,0 +1,9 @@
+a = e1 + 2 * e2 + 3 * e3
+b = 4 * e1 + 5 * e2 + 6 * e3
+0.5 * ($a * $b + $b * $a)
+inner_product($a, $b)
+
+c = v1 * e1 + v2 * e2
+d = v3 * e1 + v4 * e2
+0.5 * ($c * $d + $d * $c)
+inner_product($c, $d)

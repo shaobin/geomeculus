@@ -1,0 +1,29 @@
+# This is a comment
+// This is also a comment
+
+# Configure the algebra for the current session has a basis
+# with 3 elements that square to 1
+# and 1 element that squares to -1.
+# If algebra_signature is not set,
+# all the basis elements square to 1.
+algebra_signature 3,1
+
+# unamed expression
+e1 * e1
+
+# named expression
+F = e1 * e2
+
+# expressions with scalar variables
+a = v1 * e1 + v2 * e2
+A = v11 * e1 + v12 * e2
+B = v21 * e1 + v22 * e2
+
+# named exprs can be referenced with $ prefix
+C = $A * $B
+
+# assign real number values to the variables
+$C; v11=1; v12=2; v21=3; v22=4
+
+# call built-in functions
+exponential(0.5 * pi() * $F)

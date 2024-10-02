@@ -1,0 +1,22 @@
+I = e1 * e2 * e3
+e1 * e1
+e1 * e2
+$I * e3
+e1 * e3
+-1 * $I * e2
+e2 * e1
+-1 * $I * e3
+e2 * e2
+e2 * e3
+$I * e1
+e3 * e1
+$I * e2
+e3 * e2
+-1 * $I * e1
+e3 * e3
+
+psi = v0 + v1 * $I * e1 + v2 * $I * e2 + v3 * $I * e3
+
+e1 * $psi * e3
+e2 * $psi * e3
+e3 * $psi * e3

@@ -1,0 +1,10 @@
+I = e1 * e2
+A = v1 + v2 * $I
+B = v3 + v4 * $I
+$A * $B
+
+# rotate a vector by pi/2 in "complex plane" with {1, e1 * e2} as axes
+(1 + e1 * e2) * exponential(0.5 * pi() * $I)
+
+# rotate a vector by pi/2 in the plane with {e1, e2} as exes
+(e1 + e2) * exponential(0.5 * pi() * $I)

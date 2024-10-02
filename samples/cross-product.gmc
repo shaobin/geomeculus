@@ -1,0 +1,11 @@
+I = e1 * e2 * e3
+a = v11 * e1 + v12 * e2 + v13 * e3
+b = v21 * e1 + v22 * e2 + v23 * e3
+C = outer_product($a, $b)
+$C
+
+# cross product
+D = -1 * $I * $C
+
+# convert the cross product back to outer product
+$I * $D

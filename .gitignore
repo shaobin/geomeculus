@@ -1,0 +1,14 @@
+.ninja_*
+.cproject
+.project
+.settings
+.vscode
+.vs
+bin
+obj
+tmp
+build
+*-out
+output
+__pycache__
+build.ninja

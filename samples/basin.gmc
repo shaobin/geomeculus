@@ -1,0 +1,4 @@
+F = (v2 + 1) * log(v1)
+M = v1 * e1 + v2 * e2 + (v1 * v1 + v2 * v2) * e3
+VD = vector_derivative($F, $M, 2)
+$VD; v1=1.0; v2=0.0

@@ -1,0 +1,23 @@
+algebra_signature 3,1
+dim_signatures
+
+I = e1 * e2 * e3 * e4
+a = v11 * e1 + v12 * e2 + v13 * e3 + e4; v11=0; v12=0; v13=1
+b = v21 * e1 + v22 * e2 + v23 * e3 + e4; v21=1; v22=0; v23=0
+c = v31 * e1 + v32 * e2 + v33 * e3 + e4; v31=0; v32=1; v33=0
+d = v41 * e1 + v42 * e2 + v43 * e3 + e4; v41=1; v42=1; v43=0
+
+# a line passing through a, b
+L = outer_product($a, $b)
+
+# a plane determined by b c d
+P = outer_product($b, $c, $d)
+
+# the point section of L and P
+inner_product($P, $I * $L)
+
+# another plane
+Q =outer_product($a, $d, e1 + e2 + e3 + e4)
+
+# the intersection of planes P and Q
+inner_product($I * $P, $Q)

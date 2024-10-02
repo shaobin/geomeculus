@@ -1,0 +1,20 @@
+# a vector in 3D
+v = e1 + e2 + e3
+# a plane in 3D
+Q = (e1 + e2) * e3
+
+# rotate by geometric product of a and b
+a = 3 * e2
+b = -1 * e1 + e2
+R = $a * $b
+R_ = reverse($R)
+$R_ * $v * $R
+$R_ * $v * $R * reciprocal($R_ * $R)
+$R_ * $Q * $R * reciprocal($R_ * $R)
+
+# rotate by an angle in plane P
+P = e1 * e2
+R = exponential(0.25 * pi() * $P)
+R_ = exponential(-0.25 * pi() * $P)
+$R_ * $v * $R
+$R_ * $Q * $R
